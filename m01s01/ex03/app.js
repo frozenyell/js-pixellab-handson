@@ -14,7 +14,7 @@ form.addEventListener(
     var height = inputHeight.value || 0;
     var result = 0;
 
-    result = length * width * height;
+    result = length * width;
 
     elementResult.innerText = result;
   },
