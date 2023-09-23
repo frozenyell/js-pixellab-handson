@@ -45,3 +45,19 @@ switch (selectedRoute) {
   default:
     console.log('404');
 }
+
+var paragraphMessage = document.getElementById('message');
+var userPrompt = prompt('Introduceti numarul');
+var number = Number(userPrompt);
+
+switch (true) {
+  case number < 100:
+    var message = `${number} este mai mic decat 100.`;
+    break;
+  case number > 100:
+    var message = `${number} este mai mare decat 100.`;
+    break;
+  default:
+    var message = `${number} este egal cu 100.`;
+}
+paragraphMessage.innerText = message;
