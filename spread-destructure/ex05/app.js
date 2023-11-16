@@ -22,3 +22,33 @@ let person = {
     },
   ],
 };
+
+console.warn(` Folosind destructurarea, salveaza primul si ultimul skill
+in variabile numite skill1 si skill3, apoi folosind aceste variabile, afiseaza intr-un
+paragraf propozitia: "Cunosc html si css."`);
+
+//const skill1 = person.skills[0];
+//const skill3 = person.skills[2];
+const [skill1, , skill3] = person.skills;
+const p1 = document.createElement('p');
+const message1 = `Cunosc ${skill1} si ${skill3}.`;
+p1.innerText = message1;
+
+document.body.append(p1);
+console.log(message1);
+
+console.warn(``);
+const {
+  name: friend2Name,
+  surname: friend2Surname,
+  age: friend2Age,
+} = person.friends[1];
+console.log(
+  `Ma numesc ${friend2Name} ${friend2Surname} si am ${friend2Age} de ani.`,
+);
+
+console.warn(`Destructureaza obiectul person pentru a obtine o variabila hasPet si in functie
+de aceasta afiseaza propozitia: `);
+//const hasPet = person.petOwner;
+const { petOwner: hasPet } = person;
+console.log(`Persoana ${hasPet ? '' : 'nu'} are animale.`);

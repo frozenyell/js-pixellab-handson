@@ -1,3 +1,7 @@
 {
-  "persons": []
+  "persons": [{
+    "id":"bla",
+    "name": "Nylon",
+    "surname": "Windbreaker"
+  }]
 }
